@@ -17,13 +17,12 @@ Tag.init(
     },
     tag_name: {
       type: DataTypes.STRING,
-      allowNull: false
     }
   },
   {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
+    // freezeTableName: true,
     underscored: true,
     modelName: 'tag',
   }

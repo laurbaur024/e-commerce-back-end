@@ -17,23 +17,15 @@ ProductTag.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isNumeric: true
-      },
       references: {
-        model: 'product',
+        model: 'products',
         key: 'id'
       }
     },
     tag_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      validate: {
-        isNumeric: true
-      },
       references: {
-        model: 'tag',
+        model: 'tags',
         key: 'id'
       }
     }
@@ -41,9 +33,9 @@ ProductTag.init(
   {
     sequelize,
     timestamps: false,
-    freezeTableName: true,
+    // freezeTableName: true,
     underscored: true,
-    modelName: 'product_tag',
+    modelName: 'product_tags',
   }
 );
 
