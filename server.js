@@ -10,7 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(routes);
 
-// do I need to force: false here???
-sequelize.sync().then(() => {
+sequelize.sync({force: false}).then(() => {
   app.listen(PORT, () => console.log(`Now listening on ${PORT}`));
 });
